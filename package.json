@@ -1,0 +1,15 @@
+{
+  "name": "valider",
+  "version": "0.0.1",
+  "description": "A library to simplify the orchestration of a validation flow for forms.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --transpile-only --respawn ."
+  },
+  "author": "Ghislain Deffo",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.5"
+  }
+}
