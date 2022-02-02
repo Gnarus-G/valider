@@ -1,6 +1,6 @@
 {
   "name": "valider",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A library to simplify the orchestration of a validation flow for forms.",
   "main": "index.js",
   "scripts": {
