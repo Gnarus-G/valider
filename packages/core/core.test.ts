@@ -23,6 +23,23 @@ describe("core functions", () => {
     validateData();
   });
 
+  it("injects the data in the validate function", () => {
+    const validateData = collectValidationState(data, {
+      field: validate((_, d) => {
+        expect(d).toBe(data);
+        return true;
+      }, "a msg"),
+      otherField: [
+        validate((_, d) => {
+          expect(d).toBe(data);
+          return true;
+        }, "a message"),
+      ],
+    });
+
+    validateData();
+  });
+
   it("collects the message string when validation fails", () => {
     const validateData = collectValidationState(data, {
       field: validate((_) => false, "error message"),

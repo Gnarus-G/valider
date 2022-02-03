@@ -1,15 +1,15 @@
 type ValidationState = string | boolean;
-type ValueValidator<T> = (value: T) => ValidationState;
-type ValueValidators<T> = ValueValidator<T> | Array<ValueValidator<T>>;
-type ValidationStatesCollector<Data> = {
-  [Key in keyof Data]?: ValueValidators<Data[Key]>;
+type ValueValidator<V, D> = (value: V, data: D) => ValidationState;
+type ValueValidators<V, D> = ValueValidator<V, D> | Array<ValueValidator<V, D>>;
+type ValidationStatesCollector<D> = {
+  [Key in keyof D]?: ValueValidators<D[Key], D>;
 };
-type Predicate<T = any> = (value: T) => boolean;
+type Predicate<V, D> = (value: V, data: D) => boolean;
 
 export const validate =
-  <T>(predicate: Predicate<T>, msg: string): ValueValidator<T> =>
-  (value) =>
-    predicate(value) || msg;
+  <V, D>(predicate: Predicate<V, D>, msg: string): ValueValidator<V, D> =>
+  (value, data: D) =>
+    predicate(value, data) || msg;
 
 export const collectValidationState =
   <T>(data: T, errorsCollector: ValidationStatesCollector<T>) =>
@@ -17,8 +17,8 @@ export const collectValidationState =
     Object.entries<any>(errorsCollector)
       .map(([key, validators]) => ({
         [key]: Array.isArray(validators)
-          ? validators.map((validate) => validate(data[key as keyof T]))
-          : validators(data[key as keyof T]),
+          ? validators.map((validate) => validate(data[key as keyof T], data))
+          : validators(data[key as keyof T], data),
       }))
       .reduce((acc, partialError) => {
         Object.assign(acc, partialError);
