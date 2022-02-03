@@ -1,4 +1,4 @@
-import { validate } from "./core";
+import { validate } from "@valider/core";
 
 export const isRequired = (msg: string) => validate((value) => !!value, msg);
 

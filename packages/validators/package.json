@@ -1,0 +1,28 @@
+{
+  "name": "@validater/validators",
+  "version": "0.0.1",
+  "description": "Functions, as helpers, implemented with the core library.",
+  "main": "index.js",
+  "types": "index.ts",
+  "dependencies": {
+    "@valider/core": "*"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gnarus-G/valider.git"
+  },
+  "keywords": [
+    "form",
+    "validation",
+    "functions"
+  ],
+  "author": "Gnarus-G",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gnarus-G/valider/issues"
+  },
+  "homepage": "https://github.com/Gnarus-G/valider#readme"
+}
