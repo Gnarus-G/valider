@@ -1,6 +1,6 @@
 {
-  "name": "@validater/validators",
-  "version": "0.0.1",
+  "name": "@valider/validators",
+  "version": "0.0.2",
   "description": "Functions, as helpers, implemented with the core library.",
   "main": "dist/index.js",
   "dependencies": {
