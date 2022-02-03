@@ -13,5 +13,6 @@
   "scripts": {
     "build": "npm run build -ws",
     "test": "npm run test -ws"
-  }
+  },
+  "version": "0.1.0"
 }
