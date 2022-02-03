@@ -13,7 +13,10 @@
   },
   "scripts": {
     "build": "npm run build -ws",
-    "publish": "npm publish --access public -ws",
+    "changeset:add": "npx changeset add",
+    "version": "npx changeset version",
+    "publish": "npx changeset publish",
+    "postpublish": "git push --follow-tags",
     "test": "npm run test -ws"
   }
 }
