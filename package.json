@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build": "npm run build -ws",
+    "publish": "npm publish -ws",
     "test": "npm run test -ws"
-  },
-  "version": "0.1.0"
+  }
 }
