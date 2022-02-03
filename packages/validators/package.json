@@ -2,13 +2,13 @@
   "name": "@validater/validators",
   "version": "0.0.1",
   "description": "Functions, as helpers, implemented with the core library.",
-  "main": "index.js",
-  "types": "index.ts",
+  "main": "dist/index.js",
   "dependencies": {
     "@valider/core": "*"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "rm -rf dist && tsc"
   },
   "repository": {
     "type": "git",
