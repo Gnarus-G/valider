@@ -1,7 +1,7 @@
 type ValidationState = string | boolean;
 type ValueValidator<T> = (value: T) => ValidationState;
 type ValidationStatesCollector<Data> = {
-  [Key in keyof Data]:
+  [Key in keyof Data]?:
     | ValueValidator<Data[Key]>
     | Array<ValueValidator<Data[Key]>>;
 };
