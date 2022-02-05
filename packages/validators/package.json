@@ -4,8 +4,10 @@
   "description": "Functions, as helpers, implemented with the core library.",
   "main": "dist/index.js",
   "dependencies": {
-    "@valider/core": "*",
     "validator": "^13.7.0"
+  },
+  "peerDependencies": {
+    "@valider/core": "*"
   },
   "scripts": {
     "test": "jest",
