@@ -1,4 +1,4 @@
-import { collectValidationState } from "@valider/core";
+import { valider } from "@valider/core";
 import minLength from "./minLength";
 
 describe("minLength", () => {
@@ -8,14 +8,13 @@ describe("minLength", () => {
   };
 
   it("validates that string is not less than a given length", () => {
-    const validate = collectValidationState(data, {
+    const validate = valider(data, {
       bad: minLength(8, "at least 8"),
       good: minLength(8, "at least 8"),
     });
 
     expect(validate()).toEqual({
       bad: "at least 8",
-      good: true,
     });
   });
 });

@@ -11,7 +11,7 @@ export const validate = <V, D>(
   msg: string
 ): ValueValidator<V, D> => (value, data: D) => predicate(value, data) || msg;
 
-export const collectValidationState = <T>(
+export const valider = <T>(
   data: T,
   errorsCollector: ValidationStatesCollector<T>
 ) => () =>

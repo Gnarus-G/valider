@@ -1,4 +1,4 @@
-import { collectValidationState, validate } from ".";
+import { valider, validate } from ".";
 
 describe("core functions", () => {
   const data = {
@@ -7,7 +7,7 @@ describe("core functions", () => {
   };
 
   it("injects the right value in the validate function", () => {
-    const validateData = collectValidationState(data, {
+    const validateData = valider(data, {
       field: validate((value) => {
         expect(typeof value).toBe("string");
         expect(value).toBe(data.field);
@@ -24,7 +24,7 @@ describe("core functions", () => {
   });
 
   it("injects the data in the validate function", () => {
-    const validateData = collectValidationState(data, {
+    const validateData = valider(data, {
       field: validate((_, d) => {
         expect(d).toBe(data);
         return true;
@@ -41,7 +41,7 @@ describe("core functions", () => {
   });
 
   it("collects the message string when validation fails", () => {
-    const validateData = collectValidationState(data, {
+    const validateData = valider(data, {
       field: validate((_) => false, "error message"),
     });
 
@@ -51,7 +51,7 @@ describe("core functions", () => {
   });
 
   it("collects the messages strings when validation fails", () => {
-    const validateData = collectValidationState(data, {
+    const validateData = valider(data, {
       field: [
         validate((_) => false, "error message"),
         validate(() => false, "other msg"),
@@ -64,7 +64,7 @@ describe("core functions", () => {
   });
 
   it("collects nothing when each successful validation", () => {
-    const validateData = collectValidationState(data, {
+    const validateData = valider(data, {
       field: [
         validate((_) => true, "error message"),
         validate(() => true, "other msg"),

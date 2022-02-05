@@ -1,4 +1,4 @@
-import { collectValidationState } from "@valider/core";
+import { valider } from "@valider/core";
 import required from "./required";
 
 describe("required", () => {
@@ -11,7 +11,7 @@ describe("required", () => {
   };
 
   it("validates that a value is truthy", () => {
-    const validate = collectValidationState(data, {
+    const validate = valider(data, {
       field: required("is required"),
       field1: required("is required"),
       field2: required("is required"),
@@ -24,7 +24,6 @@ describe("required", () => {
       field1: "is required",
       field2: "is required",
       field3: "is required",
-      field4: true,
     });
   });
 });
