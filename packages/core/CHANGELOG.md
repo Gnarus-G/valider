@@ -1,5 +1,11 @@
 # @valider/core
 
+## 0.1.1
+
+### Patch Changes
+
+- d1ef887: exporting the not es version of validator.js' isEmail validator
+
 ## 0.1.0
 
 ### Minor Changes
