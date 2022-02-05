@@ -1,5 +1,14 @@
 # @valider/validators
 
+## 1.0.0
+
+### Patch Changes
+
+- 24b7c67: An empty object is now returned if all validation passes
+- Updated dependencies [78b68fe]
+- Updated dependencies [24b7c67]
+  - @valider/core@0.1.0
+
 ## 0.1.0
 
 ### Minor Changes

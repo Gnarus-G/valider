@@ -1,6 +1,6 @@
 {
   "name": "@valider/validators",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Functions, as helpers, implemented with the core library.",
   "dependencies": {
     "validator": "^13.7.0"
