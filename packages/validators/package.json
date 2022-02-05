@@ -4,7 +4,8 @@
   "description": "Functions, as helpers, implemented with the core library.",
   "main": "dist/index.js",
   "dependencies": {
-    "@valider/core": "*"
+    "@valider/core": "*",
+    "validator": "^13.7.0"
   },
   "scripts": {
     "test": "jest",
@@ -25,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/Gnarus-G/valider/issues"
   },
-  "homepage": "https://github.com/Gnarus-G/valider#readme"
+  "homepage": "https://github.com/Gnarus-G/valider#readme",
+  "devDependencies": {
+    "@types/validator": "^13.7.1"
+  }
 }

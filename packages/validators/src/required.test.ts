@@ -1,5 +1,5 @@
 import { collectValidationState } from "@valider/core";
-import { required } from "..";
+import required from "./required";
 
 describe("required", () => {
   const data = {
