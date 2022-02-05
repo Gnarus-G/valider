@@ -1,4 +1,4 @@
-import { collectValidationState, validate } from "./core";
+import { collectValidationState, validate } from ".";
 
 describe("core functions", () => {
   const data = {
@@ -63,7 +63,7 @@ describe("core functions", () => {
     });
   });
 
-  it("collects true's when validation succeed", () => {
+  it("collects nothing when each successful validation", () => {
     const validateData = collectValidationState(data, {
       field: [
         validate((_) => true, "error message"),
@@ -72,9 +72,6 @@ describe("core functions", () => {
       otherField: validate(() => true, "yet another message"),
     });
 
-    expect(validateData()).toEqual({
-      field: [true, true],
-      otherField: true,
-    });
+    expect(validateData()).toEqual({});
   });
 });
