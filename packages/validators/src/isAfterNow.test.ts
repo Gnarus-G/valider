@@ -1,4 +1,4 @@
-import { collectValidationState } from "@valider/core";
+import { valider } from "@valider/core";
 import isAfterNow from "./isAfterNow";
 
 describe("isAfterNow", () => {
@@ -8,14 +8,13 @@ describe("isAfterNow", () => {
   };
 
   it("validates that string is not less than a given length", () => {
-    const validate = collectValidationState(data, {
+    const validate = valider(data, {
       bad: isAfterNow("bad"),
       good: isAfterNow("bad"),
     });
 
     expect(validate()).toEqual({
       bad: "bad",
-      good: true,
     });
   });
 });
