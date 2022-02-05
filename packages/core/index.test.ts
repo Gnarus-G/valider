@@ -4,6 +4,7 @@ describe("core functions", () => {
   const data = {
     field: "value",
     otherField: new Date(),
+    ignored: null,
   };
 
   it("injects the right value in the validate function", () => {
@@ -73,5 +74,67 @@ describe("core functions", () => {
     });
 
     expect(validateData()).toEqual({});
+  });
+
+  it("collects only errors (when validation returned a message)", () => {
+    const validateData = valider(data, {
+      field: [
+        validate((_) => true, "error message"),
+        validate(() => false, "other msg"),
+      ],
+      otherField: validate(() => true, "yet another message"),
+    });
+
+    expect(validateData()).toEqual({
+      field: ["other msg"],
+    });
+  });
+
+  it("calls back to the function given when validation fails", () => {
+    const validateData = valider(data, {
+      field: [
+        validate((_) => false, "error message"),
+        validate(() => true, "other msg"),
+      ],
+    });
+
+    const expectedErrors = {
+      field: ["error message"],
+    };
+
+    const onSuccess = jest.fn();
+
+    expect(
+      validateData({
+        onErrors: (e) => expect(e).toEqual(expectedErrors),
+        onSuccess,
+      })
+    ).toEqual(expectedErrors);
+
+    expect(onSuccess).not.toHaveBeenCalled();
+  });
+
+  it("calls back to the function given when validation succeeds", () => {
+    const validateData = valider(data, {
+      field: [
+        validate((_) => true, "error message"),
+        validate(() => true, "other msg"),
+      ],
+    });
+
+    const expectedErrors = {};
+
+    const onSuccess = jest.fn();
+    const onErrors = jest.fn();
+
+    expect(
+      validateData({
+        onErrors,
+        onSuccess,
+      })
+    ).toEqual(expectedErrors);
+
+    expect(onSuccess).toHaveBeenCalled();
+    expect(onErrors).not.toHaveBeenCalled();
   });
 });
