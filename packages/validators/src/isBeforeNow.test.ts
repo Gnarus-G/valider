@@ -1,20 +1,20 @@
 import { collectValidationState } from "@valider/core";
-import { minLength } from "..";
+import isBeforeNow from "./isBeforeNow";
 
-describe("minLength", () => {
+describe("isBeforeNow", () => {
   const data = {
-    bad: "",
-    good: "alsdkfjasdkl",
+    bad: new Date(Date.now() + 1000),
+    good: new Date(2020, 1),
   };
 
   it("validates that string is not less than a given length", () => {
     const validate = collectValidationState(data, {
-      bad: minLength(8, "at least 8"),
-      good: minLength(8, "at least 8"),
+      bad: isBeforeNow("bad"),
+      good: isBeforeNow("bad"),
     });
 
     expect(validate()).toEqual({
-      bad: "at least 8",
+      bad: "bad",
       good: true,
     });
   });
