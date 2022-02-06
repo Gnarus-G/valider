@@ -1,5 +1,11 @@
 # @valider/core
 
+## 0.1.5
+
+### Patch Changes
+
+- 8a849fb: now targeting es6 for compilation
+
 ## 0.1.4
 
 ### Patch Changes

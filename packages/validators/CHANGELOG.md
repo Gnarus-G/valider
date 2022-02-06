@@ -1,5 +1,13 @@
 # @valider/validators
 
+## 1.0.6
+
+### Patch Changes
+
+- 8a849fb: now targeting es6 for compilation
+- Updated dependencies [8a849fb]
+  - @valider/core@0.1.5
+
 ## 1.0.5
 
 ### Patch Changes
