@@ -1,5 +1,11 @@
 # @valider/validators
 
+## 1.0.7
+
+### Patch Changes
+
+- 251137f: fix for a module resolution issue
+
 ## 1.0.6
 
 ### Patch Changes
