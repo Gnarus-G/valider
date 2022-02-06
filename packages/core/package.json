@@ -4,6 +4,7 @@
   "description": "A library to simplify the orchestration of a validation flow for forms.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": ["dist"],
   "scripts": {
     "test:watch": "jest --watch",
     "test": "jest",
