@@ -1,5 +1,11 @@
 # @valider/core
 
+## 0.1.4
+
+### Patch Changes
+
+- e74e352: fix module resolution issues when importing the validators
+
 ## 0.1.3
 
 ### Patch Changes
