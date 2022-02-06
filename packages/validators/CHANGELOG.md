@@ -1,5 +1,13 @@
 # @valider/validators
 
+## 1.0.2
+
+### Patch Changes
+
+- 3764c9a: Refactored for better consumption.
+- Updated dependencies [3764c9a]
+  - @valider/core@0.1.2
+
 ## 1.0.1
 
 ### Patch Changes

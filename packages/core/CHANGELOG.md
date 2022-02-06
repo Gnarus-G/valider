@@ -1,5 +1,11 @@
 # @valider/core
 
+## 0.1.2
+
+### Patch Changes
+
+- 3764c9a: Refactored for better consumption.
+
 ## 0.1.1
 
 ### Patch Changes
