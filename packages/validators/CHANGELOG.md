@@ -1,5 +1,11 @@
 # @valider/validators
 
+## 1.0.4
+
+### Patch Changes
+
+- 538d5ae: fixed moduled resolution bug
+
 ## 1.0.3
 
 ### Patch Changes
