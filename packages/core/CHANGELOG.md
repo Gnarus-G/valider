@@ -1,5 +1,11 @@
 # @valider/core
 
+## 0.1.3
+
+### Patch Changes
+
+- f899364: Refactored to allow types discovery.
+
 ## 0.1.2
 
 ### Patch Changes

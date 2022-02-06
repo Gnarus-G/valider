@@ -1,5 +1,13 @@
 # @valider/validators
 
+## 1.0.3
+
+### Patch Changes
+
+- f899364: Refactored to allow types discovery.
+- Updated dependencies [f899364]
+  - @valider/core@0.1.3
+
 ## 1.0.2
 
 ### Patch Changes

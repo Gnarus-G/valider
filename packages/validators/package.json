@@ -1,6 +1,6 @@
 {
   "name": "@valider/validators",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Functions, as helpers, implemented with the core library.",
   "types": "dist/index.d.ts",
   "dependencies": {

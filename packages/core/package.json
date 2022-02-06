@@ -1,6 +1,6 @@
 {
   "name": "@valider/core",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A library to simplify the orchestration of a validation flow for forms.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
