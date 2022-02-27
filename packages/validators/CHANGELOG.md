@@ -1,5 +1,11 @@
 # @valider/validators
 
+## 1.0.8
+
+### Patch Changes
+
+- 90e73bb: fix module resolution bug in jest
+
 ## 1.0.7
 
 ### Patch Changes
