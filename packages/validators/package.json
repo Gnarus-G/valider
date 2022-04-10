@@ -8,10 +8,8 @@
     "dist"
   ],
   "dependencies": {
-    "validator": "^13.7.0"
-  },
-  "peerDependencies": {
-    "@valider/core": "*"
+    "validator": "^13.7.0",
+    "@valider/core": "workspace:*"
   },
   "scripts": {
     "test": "jest",
