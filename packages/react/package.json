@@ -1,15 +1,20 @@
 {
-  "name": "@valider/validators",
-  "version": "1.0.8",
-  "description": "Functions, as helpers, implemented with the core library.",
+  "name": "@valider/react",
+  "version": "0.0.1",
+  "description": "An adapter of @valider for React.js",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/index.d.js",
   "files": [
     "dist"
   ],
   "dependencies": {
-    "validator": "^13.7.0",
+    "react": "^17.0.0",
     "@valider/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@testing-library/react-hooks": "^8.0.0",
+    "react-test-renderer": "^17.0.0"
   },
   "scripts": {
     "dev": "tsc --watch",
@@ -22,17 +27,14 @@
     "url": "git+https://github.com/Gnarus-G/valider.git"
   },
   "keywords": [
-    "form",
     "validation",
-    "functions"
+    "form",
+    "react"
   ],
   "author": "Gnarus-G",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Gnarus-G/valider/issues"
   },
-  "homepage": "https://github.com/Gnarus-G/valider#readme",
-  "devDependencies": {
-    "@types/validator": "^13.7.1"
-  }
+  "homepage": "https://github.com/Gnarus-G/valider#readme"
 }
