@@ -1,5 +1,11 @@
 # @valider/react
 
+## 0.0.2
+
+### Patch Changes
+
+- 6a1a9f0: @valider/core is a peer dependency of @valider/react
+
 ## 0.0.1
 
 ### Patch Changes
