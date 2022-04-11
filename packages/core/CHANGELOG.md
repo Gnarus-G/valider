@@ -1,5 +1,11 @@
 # @valider/core
 
+## 0.1.6
+
+### Patch Changes
+
+- c677498: Expose a needed type for peer packages to consume.
+
 ## 0.1.5
 
 ### Patch Changes
