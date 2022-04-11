@@ -49,4 +49,30 @@ describe("useValider", () => {
 
     expect(onSuccess).toHaveBeenCalled();
   });
+
+  it("resets when there are no more errors", () => {
+    let bool = false;
+
+    const { result } = renderHook(() =>
+      useValider(data, {
+        field: validate(() => bool, "message"),
+      })
+    );
+
+    let [, validateData] = result.current;
+
+    act(() => validateData(onSuccess));
+
+    let [errors] = result.current;
+    expect(errors).toEqual({
+      field: "message",
+    });
+
+    bool = true;
+
+    act(() => validateData(onSuccess));
+
+    [errors] = result.current;
+    expect(errors).toEqual({});
+  });
 });

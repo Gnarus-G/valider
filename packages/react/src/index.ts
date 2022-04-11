@@ -10,6 +10,7 @@ export default function useValider<T>(
     errors,
     useCallback(
       (onSuccess: () => void) => {
+        setErrors({});
         const runValidation = valider(input, errorsCollector);
         runValidation({ onErrors: setErrors, onSuccess });
       },
