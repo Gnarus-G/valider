@@ -24,30 +24,28 @@ importers:
   packages/react:
     specifiers:
       '@testing-library/react-hooks': ^8.0.0
-      '@types/jest': ^27.4.1
       '@types/react': ^17.0.0
-      '@valider/core': workspace:*
+      '@valider/core': workspace:^0.1.5
       react: ^17.0.0
       react-test-renderer: ^17.0.0
     dependencies:
-      '@valider/core': link:../core
       react: 17.0.2
     devDependencies:
       '@testing-library/react-hooks': 8.0.0_73cc2521999a214eb1c21d4e6287970e
-      '@types/jest': 27.4.1
       '@types/react': 17.0.44
+      '@valider/core': link:../core
       react-test-renderer: 17.0.2_react@17.0.2
 
   packages/validators:
     specifiers:
       '@types/validator': ^13.7.1
-      '@valider/core': workspace:*
+      '@valider/core': workspace:^0.1.5
       validator: ^13.7.0
     dependencies:
-      '@valider/core': link:../core
       validator: 13.7.0
     devDependencies:
       '@types/validator': 13.7.2
+      '@valider/core': link:../core
 
 packages:
 
