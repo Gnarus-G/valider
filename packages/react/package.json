@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "description": "An adapter of @valider for React.js",
   "main": "dist/index.js",
-  "types": "dist/index.d.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
