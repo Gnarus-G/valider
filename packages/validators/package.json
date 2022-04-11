@@ -1,6 +1,6 @@
 {
   "name": "@valider/validators",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Functions, as helpers, implemented with the core library.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,8 +8,7 @@
     "dist"
   ],
   "dependencies": {
-    "validator": "^13.7.0",
-    "@valider/core": "workspace:*"
+    "validator": "^13.7.0"
   },
   "scripts": {
     "dev": "tsc --watch",
@@ -33,6 +32,10 @@
   },
   "homepage": "https://github.com/Gnarus-G/valider#readme",
   "devDependencies": {
-    "@types/validator": "^13.7.1"
+    "@types/validator": "^13.7.1",
+    "@valider/core": "workspace:^0.1.5"
+  },
+  "peerDependencies": {
+    "@valider/core": "workspace:^0.1.5"
   }
 }

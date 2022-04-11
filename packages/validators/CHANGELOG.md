@@ -1,5 +1,11 @@
 # @valider/validators
 
+## 1.0.9
+
+### Patch Changes
+
+- 192a071: @valider/core is a peer dependency.
+
 ## 1.0.8
 
 ### Patch Changes
