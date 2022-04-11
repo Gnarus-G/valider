@@ -1,5 +1,11 @@
 # @valider/react
 
+## 0.0.4
+
+### Patch Changes
+
+- af5357f: Fix a bug where errors were false positives due to staleness.
+
 ## 0.0.3
 
 ### Patch Changes
